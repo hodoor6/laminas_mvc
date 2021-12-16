@@ -45,10 +45,7 @@ return [
     ],
 	'db' => [
         'driver' => 'Pdo',
-        'dsn' => 'mysql:dbname=laminas_db;host=localhost',
-        'driver_options' => [
-            1002 => 'SET NAMES \'UTF8\'',
-        ],
+        'dsn'    => sprintf('sqlite:%s/data/laminastutorial.db', realpath(getcwd())),
     ],
 'service_manager' =>  [
         'service_manager' => [
